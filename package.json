@@ -1,0 +1,25 @@
+{
+  "name": "kooba_project",
+  "version": "1.0.0",
+  "description": "Kooba Frontend Challenge",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielsky81/Kooba_FED.git"
+  },
+  "author": "Daniel Orchel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielsky81/Kooba_FED/issues"
+  },
+  "homepage": "https://github.com/danielsky81/Kooba_FED#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-sass": "^4.0.2"
+  }
+}
