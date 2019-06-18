@@ -3,11 +3,6 @@ const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 const imagemin = require('gulp-imagemin');
 
-function check(cb) {
-    console.log('it is running!!!');
-    cb();
-}
-
 function static() {
     return gulp.src('src/static/*.html')
     .pipe(gulp.dest('dist'))
@@ -15,9 +10,15 @@ function static() {
 }
 
 function img() {
-    return gulp.src('src/media/*.jpg')
+    return gulp.src('src/media/img/*.jpg')
     .pipe(imagemin())
-    .pipe(gulp.dest('dist/media'))
+    .pipe(gulp.dest('dist/media/img'))
+    .pipe(browserSync.stream());
+}
+
+function vector() {
+    return gulp.src('src/media/other/*.svg')
+    .pipe(gulp.dest('dist/media/other'))
     .pipe(browserSync.stream());
 }
 
@@ -41,15 +42,16 @@ function watch() {
         }
     });
     gulp.watch('src/static/*.html').on('change', browserSync.reload)
-    gulp.watch('src/media/*.jpg', img)
+    gulp.watch('src/media/img/*.jpg', img)
+    gulp.watch('src/media/other/*.svg', vector)
     gulp.watch('src/style/*.scss', style)
     gulp.watch('src/script/*.js').on('change', browserSync.reload)
 }
 
 exports.static = static;
 exports.img = img;
+exports.vector = vector;
 exports.style = style;
 exports.script = script;
-gulp.task('default', gulp.series(static, img, style, script));
-// exports.build = series(static, img, style, script);
+gulp.task('default', gulp.series(static, img, vector, style, script));
 exports.watch = watch;

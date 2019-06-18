@@ -1,4 +1,62 @@
 body {
-  background: #000;
   font-family: "Roboto", sans-serif;
-  color: #fff; }
+  color: #fff;
+  margin: 0; }
+
+.nav-logo {
+  position: absolute;
+  height: 43px;
+  top: 8vh;
+  left: 20vw; }
+
+.section-hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.69), rgba(0, 0, 0, 0.69)), url("../media/background.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.section-welcome-text {
+  position: absolute;
+  top: 25vh;
+  left: 30vw;
+  width: 60vw; }
+  .section-welcome-text h1 {
+    font-size: 3rem; }
+  .section-welcome-text p {
+    line-height: 1.5rem;
+    width: 70%; }
+
+.section-slider-container {
+  height: 35vh;
+  display: flex;
+  justify-content: space-between; }
+
+.section-slider-card {
+  height: 100%;
+  width: 30%; }
+
+.slider-card-img1, .slider-card-img2, .slider-card-img3 {
+  height: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-right-radius: 25px; }
+
+.slider-card-img1 {
+  background-image: url("../media/img/first.jpg"); }
+
+.slider-card-img2 {
+  background-image: url("../media/img/second.jpg"); }
+
+.slider-card-img3 {
+  background-image: url("../media/img/third.jpg"); }
+
+.slider-card-text {
+  height: 40%; }
+  .slider-card-text h2 {
+    font-weight: bold; }
+  .slider-card-text p {
+    font-size: .8rem;
+    line-height: 1rem;
+    width: 100%; }
