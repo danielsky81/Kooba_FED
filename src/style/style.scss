@@ -1,5 +1,7 @@
 $font: 'Roboto', sans-serif;
 $font-color: #fff;
+$breakpoint-medium: 1145px;
+$breakpoint-small: 855px;
 
 body {
     font-family: $font;
@@ -15,12 +17,11 @@ body {
 }
 
 .section-hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.69), rgba(0, 0, 0, 0.69)), url("../media/background.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.69), rgba(0, 0, 0, 0.69)), url("../media/img/background.jpg");
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    // position: relative;
 }
 
 .section-welcome-text {
@@ -38,20 +39,19 @@ body {
 }
 
 .section-slider-container {
-    // background-color: orange;
-    height: 35vh;
+    width: 810px;
+    height: 400px;
     display: flex;
-    justify-content: space-between;
+    overflow: hidden;
 }
 
 .section-slider-card {
-    // background-color: orange;
-    height: 100%;
-    width: 30%;
+    min-width: 250px;
+    margin-right: 20px;
 }
 
 .slider-card-img1, .slider-card-img2, .slider-card-img3 {
-    height: 60%;
+    height: 200px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -71,7 +71,7 @@ body {
 }
 
 .slider-card-text {
-    height: 40%;
+    height: 200px;
     h2 {
         font-weight: bold;
     }
@@ -79,5 +79,29 @@ body {
         font-size: .8rem;
         line-height: 1rem;
         width: 100%;
+    }
+}
+
+@media (max-width: $breakpoint-medium) {
+    .nav-logo {
+        top: 5vh;
+        left: 5vw;
+    }
+    .section-welcome-text {
+        top: 15vh;
+        left: 5vw;
+    }
+}
+
+@media (max-width: $breakpoint-small) {
+    .section-welcome-text {
+        left: 5vw;
+    }
+    .section-slider-container {
+        flex-direction: column;
+        max-width: 80vw;
+    }
+    .section-welcome-text {
+        width: 100vw;
     }
 }

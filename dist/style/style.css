@@ -10,7 +10,7 @@ body {
   left: 20vw; }
 
 .section-hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.69), rgba(0, 0, 0, 0.69)), url("../media/background.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.69), rgba(0, 0, 0, 0.69)), url("../media/img/background.jpg");
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -28,16 +28,17 @@ body {
     width: 70%; }
 
 .section-slider-container {
-  height: 35vh;
+  width: 810px;
+  height: 400px;
   display: flex;
-  justify-content: space-between; }
+  overflow: hidden; }
 
 .section-slider-card {
-  height: 100%;
-  width: 30%; }
+  min-width: 250px;
+  margin-right: 20px; }
 
 .slider-card-img1, .slider-card-img2, .slider-card-img3 {
-  height: 60%;
+  height: 200px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -53,10 +54,27 @@ body {
   background-image: url("../media/img/third.jpg"); }
 
 .slider-card-text {
-  height: 40%; }
+  height: 200px; }
   .slider-card-text h2 {
     font-weight: bold; }
   .slider-card-text p {
     font-size: .8rem;
     line-height: 1rem;
     width: 100%; }
+
+@media (max-width: 1145px) {
+  .nav-logo {
+    top: 5vh;
+    left: 5vw; }
+  .section-welcome-text {
+    top: 15vh;
+    left: 5vw; } }
+
+@media (max-width: 855px) {
+  .section-welcome-text {
+    left: 5vw; }
+  .section-slider-container {
+    flex-direction: column;
+    max-width: 80vw; }
+  .section-welcome-text {
+    width: 100vw; } }
